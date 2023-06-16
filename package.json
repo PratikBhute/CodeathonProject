@@ -6,7 +6,9 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "storybook": "ng run GUI_Registration:storybook",
+    "build-storybook": "ng run GUI_Registration:build-storybook"
   },
   "private": true,
   "dependencies": {
@@ -18,6 +20,8 @@
     "@angular/platform-browser": "^15.1.0",
     "@angular/platform-browser-dynamic": "^15.1.0",
     "@angular/router": "^15.1.0",
+    "bootstrap": "^5.3.0",
+    "lodash": "^4.17.21",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.12.0"
@@ -26,13 +30,35 @@
     "@angular-devkit/build-angular": "^15.1.2",
     "@angular/cli": "~15.1.2",
     "@angular/compiler-cli": "^15.1.0",
+    "@compodoc/compodoc": "^1.1.21",
+    "@storybook/addon-essentials": "^7.0.20",
+    "@storybook/addon-interactions": "^7.0.20",
+    "@storybook/addon-links": "^7.0.20",
+    "@storybook/angular": "^7.0.20",
+    "@storybook/blocks": "^7.0.20",
+    "@storybook/testing-library": "^0.0.14-next.2",
     "@types/jasmine": "~4.3.0",
     "jasmine-core": "~4.5.0",
+    "json-loader": "^0.5.7",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.1.0",
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.0.0",
-    "typescript": "~4.9.4"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "storybook": "^7.0.20",
+    "typescript": "~4.9.4",
+    "webpack": "^5.86.0",
+    "webpack-cli": "^5.1.4"
+  },
+  
+  "browser": {
+    "colors": false,
+    "events": "eventemitter3",
+    "checkForModuleDuplicates": false,
+    "url": "./shims/url",      
+    "tracer": false
   }
 }
+
