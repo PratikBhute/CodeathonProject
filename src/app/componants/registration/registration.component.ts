@@ -1,5 +1,6 @@
 
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 export interface registar{
   firstName: String;
@@ -11,10 +12,56 @@ export interface registar{
  }
 @Component({
   selector: 'app-registration',
-  templateUrl: './registration.component.html',
+  //imports: [CommonModule],
+ 
+ template:  ``,
+templateUrl: './registration.component.html',
   styleUrls: ['./registration.component.css'],
 })
 export class RegistrationComponent implements OnInit{
+
+  /**
+   * Is this the principal call to action on the page?
+   */
+  @Input()
+  primary = true;
+
+  /**
+   * What background color to use
+   */
+  @Input()
+  backgroundColor?: string;
+
+  /**
+   * How large should the button be?
+   */
+  @Input()
+  size: 'small' | 'medium' | 'large' = 'medium';
+
+  /**
+   * Button contents
+   *
+   * @required
+   */
+  @Input()
+  label = 'Button';
+  
+  static args: { 
+      firstName: string;
+      lastName: string; 
+      username: string;
+      mobileNo: string; 
+      email: string;
+      password: string;
+   };
+
+  
+
+  public get classes(): string[] {
+    const mode = this.primary ? 'storybook-button--primary' : 'storybook-button--secondary';
+
+    return ['storybook-button', `storybook-button--${this.size}`, mode];
+  }
   ngOnInit(): void {
     throw new Error('Method not implemented.');
   }
@@ -25,6 +72,9 @@ export class RegistrationComponent implements OnInit{
   email!: string;
   password!: string;
 
+  /**
+   * Optional click handler
+   */
   @Output() register: EventEmitter<any> = new EventEmitter();
 
   onRegister() {
@@ -41,6 +91,7 @@ export class RegistrationComponent implements OnInit{
 
   }
 }
+
 
 
 

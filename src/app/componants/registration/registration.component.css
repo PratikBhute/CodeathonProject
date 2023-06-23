@@ -1,0 +1,76 @@
+
+  .container {
+    font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  .form-control {
+    border: 0;
+    border-radius: 3em;
+    padding: 6px 12px;
+    box-sizing: border-box;
+    width: 100%;
+  }
+
+  label {
+    color: #333;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    background-color: transparent;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
+    color: #333;
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+  }
+
+  .button {
+    font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    border: 0;
+    border-radius: 3em;
+    cursor: pointer;
+    display: inline-block;
+    line-height: 1;
+    font-size: 14px;
+    padding: 11px 20px;
+    color: #333;
+    background-color: transparent;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
+  }
+
+  .app-registration {
+    font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    border: 0;
+    border-radius: 3em;
+    cursor: pointer;
+    display: inline-block;
+    line-height: 1;
+  }
+  .app-registration--primary {
+    color: white;
+    background-color: #1ea7fd;
+  }
+  .app-registration-secondary {
+    color: #333;
+    background-color: transparent;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
+  }
+  .app-registration--small {
+    font-size: 12px;
+    padding: 10px 16px;
+  }
+  .app-registration--medium {
+    font-size: 14px;
+    padding: 11px 20px;
+  }
+  .app-registration--large {
+    font-size: 16px;
+    padding: 12px 24px;
+  }
