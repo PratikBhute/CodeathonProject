@@ -1,4 +1,11 @@
 # GUIRegistration
+# Instructions for running code 
+1) install storybook globally - npm install -g @storybook/cli
+2)  Initialize storybook - sb init --type angular
+3) when integrated with angular with storybook we need to build the packages and necessary compilation of dependencies - npm install --save-dev @angular-devkit/build-angular
+4) to start or run storybook dev server run this  command- npm run storybook
+it'll be up and running on - http://localhost:6006
+5) To run only angular inside storybook - ng serve
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.2.
 
